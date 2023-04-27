@@ -18,7 +18,6 @@ int main() {
 
 }
 ```
-
 # Problem #02
 Given a string, count how many vowels there are in that string.
 # Solution
@@ -49,4 +48,10 @@ int main() {
 
     std::cout << "The sentence had total (" << total_vowels << ") vowels in it\n";
 }
+```
+# Problem #03
+Given any number, print its table of multiplication.
+# Solution
+```cpp
+
 ```
