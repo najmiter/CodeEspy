@@ -65,5 +65,35 @@ int main() {
     mul_table(7);
 
 }
+```
+# Problem #04
+Generate a random number and store it in a variable called `secret`. Then give the user 5 attempts to guess that number. If the user guesses it, print `"You WON!"`. Otherwise print `"You LOST!"`. For simplicity, the random number must only be between 0 and 10 inclusive.
+# Solution
+```cpp
+#include <iostream>
+#include <cmath>
+#include <ctime>
 
+bool play_GuessGame() {
+    const int32_t attempts{5};
+    std::srand(std::time(nullptr));
+
+    int32_t secret{ std::rand() % 11 }; // 0 - 10
+
+    for (size_t i{}; i < attempts; i++) {
+        int32_t u_guess;
+        std::cout << "Your guess:> ";
+        std::cin >> u_guess;
+        if (u_guess == secret) return true;
+    }
+    return false;
+}
+
+int main() {
+    auto result {play_GuessGame()};
+
+    if (result) std::cout << "You WON!\n";
+    else std::cout << "You LOST!\n";
+
+}
 ```
