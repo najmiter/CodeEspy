@@ -53,5 +53,17 @@ int main() {
 Given any number, print its table of multiplication.
 # Solution
 ```cpp
+#include <iostream>
+
+void mul_table(int32_t _number) {
+    for (size_t i{1}; i <= 10UL; i++) {
+        std::cout << _number << " x " << i << " = " << _number*i << std::endl;
+    }
+}
+
+int main() {
+    mul_table(7);
+
+}
 
 ```
